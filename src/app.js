@@ -18,6 +18,13 @@ app.use(express.static("public"))
 //jaise pdf file me store krna chahte hai img vgrh store krna chahte hai
 app.use(cookieParser())
 
+//routes import
+import userRouter from './routes/user.routes.js'
+
+//routes declaration
+app.use("/api/v1/users/",userRouter)
+
+//http://localhost:8000/api/v1/users/register   we are making this type of route
 
 
 

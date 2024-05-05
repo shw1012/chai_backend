@@ -1,18 +1,10 @@
 // asynchandler will make a method aur phir export krdega
 const asyncHandler =(requestHandler)=>{
-    (req,res,next)=>{
-        Promise.resolve(requestHandler(req,res,next)).
-        catch((err)=>next(err))
+   return(req,res,next)=>{
+        Promise.resolve(requestHandler(req,res,next)).catch((err)=>next(err))
     }
 }
-
-export {asyncHandler}
-
-
-
-
-
-
+export { asyncHandler}
 
 // const asyncHandler = () ={}
 // const asyncHandler =(func) => () => {}
